@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        currentRoad = firstRoad;
         moveAble = true;
 
     }

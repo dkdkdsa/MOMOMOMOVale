@@ -28,6 +28,23 @@ public class RotateManager : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+
+            rotateObj.transform.DORotate(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.OutBounce).OnComplete(() =>
+            {
+
+                foreach (var itme in rotateObj.GetComponentsInChildren<RoadObject>())
+                {
+
+                    itme.moveAble = false;
+
+                }
+
+            });
+
+        }
+
     }
 
 }
